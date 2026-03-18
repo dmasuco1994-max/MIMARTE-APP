@@ -1,0 +1,61 @@
+[
+  {
+    "_id": "p1",
+    "title": "Pijama Stitch Invierno",
+    "description": "Pijama de plush ultra suave con diseño de Stitch. Ideal para las noches más frías. Incluye capucha con orejitas y detalles bordados de alta calidad.",
+    "price": 45000,
+    "images": [
+      "https://picsum.photos/seed/stitch1/800/1000",
+      "https://picsum.photos/seed/stitch2/800/1000"
+    ],
+    "variations": [
+      { "_id": "v1", "size": "S", "color": "Azul", "stock": 10 },
+      { "_id": "v2", "size": "M", "color": "Azul", "stock": 5 },
+      { "_id": "v3", "size": "L", "color": "Azul", "stock": 2 }
+    ],
+    "createdAt": "2026-03-17T23:58:55.000Z"
+  },
+  {
+    "_id": "p2",
+    "title": "Pijama Harry Potter Gryffindor",
+    "description": "Siente la magia con este pijama de dos piezas de algodón premium. Estampado oficial de la casa Gryffindor. Cómodo, ligero y con un diseño clásico.",
+    "price": 38000,
+    "images": [
+      "https://picsum.photos/seed/hp1/800/1000",
+      "https://picsum.photos/seed/hp2/800/1000"
+    ],
+    "variations": [
+      { "_id": "v4", "size": "M", "color": "Bordeaux", "stock": 15 },
+      { "_id": "v5", "size": "XL", "color": "Bordeaux", "stock": 8 }
+    ],
+    "createdAt": "2026-03-17T23:59:00.000Z"
+  },
+  {
+    "_id": "p3",
+    "title": "Pijama Panda Kawaii",
+    "description": "Enterito de polar soft con diseño de Panda. Súper abrigado y tierno. Cuenta con cierre frontal y puños elásticos para mayor comodidad.",
+    "price": 42000,
+    "images": [
+      "https://picsum.photos/seed/panda1/800/1000"
+    ],
+    "variations": [
+      { "_id": "v6", "size": "S", "color": "Blanco/Negro", "stock": 12 },
+      { "_id": "v7", "size": "M", "color": "Blanco/Negro", "stock": 20 }
+    ],
+    "createdAt": "2026-03-17T23:59:10.000Z"
+  },
+  {
+    "_id": "p4",
+    "title": "Pijama Marvel Avengers",
+    "description": "Para los pequeños y grandes héroes de la casa. Pijama de algodón con estampa de los personajes principales de Avengers. Resistente a lavados frecuentes.",
+    "price": 35000,
+    "images": [
+      "https://picsum.photos/seed/marvel1/800/1000"
+    ],
+    "variations": [
+      { "_id": "v8", "size": "L", "color": "Gris", "stock": 7 },
+      { "_id": "v9", "size": "S", "color": "Gris", "stock": 0 }
+    ],
+    "createdAt": "2026-03-17T23:59:20.000Z"
+  }
+]
