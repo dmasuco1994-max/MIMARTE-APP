@@ -2,7 +2,7 @@ import React from "react";
 import { useCartStore } from "../store/cartStore.ts";
 import { Trash2, Plus, Minus, MessageCircle, ShoppingBag, LayoutGrid } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Cart() {
   const { items, removeItem, updateQuantity, getTotal } = useCartStore();

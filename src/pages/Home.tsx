@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import { api } from "../services/api.ts";
 import { IProduct } from "../types/index.ts";
 import { ShoppingBag, Star, Heart, Truck, ShieldCheck, MessageCircle, ChevronDown, LayoutGrid } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [products, setProducts] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    api.getProducts().then(setProducts).finally(() => setLoading(false));
+    api.getProducts()
+      .then((data) => setProducts(Array.isArray(data) ? data : []))
+      .finally(() => setLoading(false));
   }, []);
 
   if (loading) return (

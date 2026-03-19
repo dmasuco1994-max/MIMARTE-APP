@@ -4,7 +4,7 @@ import { api } from "../services/api.ts";
 import { IProduct, IVariation } from "../types/index.ts";
 import { useCartStore } from "../store/cartStore.ts";
 import { ChevronLeft, ShoppingCart, Check, X, Ruler, LayoutGrid } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -24,7 +24,8 @@ export default function ProductDetail() {
         setProduct(data);
         // Fetch related products
         const all = await api.getProducts();
-        setRelatedProducts(all.filter(p => p._id !== id).slice(0, 4));
+        const productsArray = Array.isArray(all) ? all : [];
+        setRelatedProducts(productsArray.filter(p => p._id !== id).slice(0, 4));
       }).finally(() => setLoading(false));
     }
   }, [id]);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { api } from "../services/api.ts";
 import { IProduct } from "../types/index.ts";
 import { Search, Filter, X, ChevronDown, ShoppingBag } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Catalog() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -15,7 +15,9 @@ export default function Catalog() {
   const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
-    api.getProducts().then(setProducts).finally(() => setLoading(false));
+    api.getProducts()
+      .then((data) => setProducts(Array.isArray(data) ? data : []))
+      .finally(() => setLoading(false));
   }, []);
 
   // Extract all unique sizes and colors for filters
